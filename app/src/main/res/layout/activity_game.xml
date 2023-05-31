@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_sky_background"
+    app:layoutDescription="@xml/activity_game_scene"
+    tools:context=".GameActivity">
+
+    <ImageView
+        android:id="@+id/errorView"
+        android:layout_width="207dp"
+        android:layout_height="166dp"
+        android:background="@android:color/transparent"
+        android:padding="10dp"
+        android:src="@drawable/error_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreTxt"
+        app:layout_constraintVertical_bias="0.183" />
+
+    <TextView
+        android:id="@+id/countDownTimerTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/yellow_button_regular"
+        android:padding="10dp"
+        android:scaleType="centerCrop"
+        android:text="45.000"
+        android:textColor="@color/main_orange"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/yellow_button_regular"
+        android:padding="10dp"
+        android:text="0"
+        android:textColor="@color/main_orange"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/countDownTimerTxt" />
+
+    <ImageButton
+        android:id="@+id/pauseGameBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/yellow_button_selector"
+        android:padding="10dp"
+        android:src="@drawable/pause_selector"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/hole9thL"
+        android:layout_width="40dp"
+        android:layout_height="26dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="HoleMiddleLeft"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        app:layout_constraintBottom_toTopOf="@+id/hole10thL"
+        app:layout_constraintEnd_toEndOf="@+id/hole10thL" />
+
+    <ImageButton
+        android:id="@+id/hole9thC"
+        android:layout_width="40dp"
+        android:layout_height="26dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="HoleMiddleLeft"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        app:layout_constraintBottom_toTopOf="@+id/hole10thC"
+        app:layout_constraintEnd_toStartOf="@+id/hole9thR"
+        app:layout_constraintStart_toEndOf="@+id/hole9thL" />
+
+    <ImageButton
+        android:id="@+id/hole9thR"
+        android:layout_width="41dp"
+        android:layout_height="26dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="HoleMiddleLeft"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        app:layout_constraintBottom_toTopOf="@+id/hole10thR"
+        app:layout_constraintStart_toStartOf="@+id/hole10thR" />
+
+    <ImageButton
+        android:id="@+id/hole10thL"
+        android:layout_width="48dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="HoleMiddleLeft"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        app:layout_constraintBottom_toTopOf="@+id/hole11thL"
+        app:layout_constraintEnd_toEndOf="@+id/hole11thL" />
+
+    <ImageButton
+        android:id="@+id/hole10thC"
+        android:layout_width="48dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="HoleMiddleLeft"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        app:layout_constraintBottom_toTopOf="@+id/hole11thC"
+        app:layout_constraintEnd_toStartOf="@+id/hole10thR"
+        app:layout_constraintStart_toEndOf="@+id/hole10thL" />
+
+    <ImageButton
+        android:id="@+id/hole10thR"
+        android:layout_width="48dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="HoleMiddleLeft"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        app:layout_constraintBottom_toTopOf="@+id/hole11thR"
+        app:layout_constraintStart_toStartOf="@+id/hole11thR" />
+
+    <ImageButton
+        android:id="@+id/hole11thL"
+        android:layout_width="62dp"
+        android:layout_height="31dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="HoleMiddleLeft"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        app:layout_constraintBottom_toTopOf="@+id/hole12thL"
+        app:layout_constraintEnd_toEndOf="@+id/hole12thL" />
+
+    <ImageButton
+        android:id="@+id/hole11thC"
+        android:layout_width="62dp"
+        android:layout_height="31dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="HoleMiddleLeft"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        app:layout_constraintBottom_toTopOf="@+id/hole12thC"
+        app:layout_constraintEnd_toStartOf="@+id/hole11thR"
+        app:layout_constraintStart_toEndOf="@+id/hole11thL" />
+
+    <ImageButton
+        android:id="@+id/hole11thR"
+        android:layout_width="62dp"
+        android:layout_height="31dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="HoleMiddleLeft"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        app:layout_constraintBottom_toTopOf="@+id/hole12thR"
+        app:layout_constraintStart_toStartOf="@+id/hole12thR" />
+
+    <ImageButton
+        android:id="@+id/hole12thL"
+        android:layout_width="80dp"
+        android:layout_height="44dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="HoleMiddleLeft"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        app:layout_constraintBottom_toTopOf="@+id/hole13thL"
+        app:layout_constraintEnd_toEndOf="@+id/hole13thL" />
+
+    <ImageButton
+        android:id="@+id/hole12thC"
+        android:layout_width="80dp"
+        android:layout_height="44dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="hole12thC"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        app:layout_constraintBottom_toTopOf="@+id/hole13thC"
+        app:layout_constraintEnd_toStartOf="@+id/hole12thR"
+        app:layout_constraintStart_toEndOf="@+id/hole12thL" />
+
+    <ImageButton
+        android:id="@+id/hole12thR"
+        android:layout_width="80dp"
+        android:layout_height="44dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="hole12thR"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        app:layout_constraintBottom_toTopOf="@+id/hole13thR"
+        app:layout_constraintStart_toStartOf="@+id/hole13thR" />
+
+    <ImageButton
+        android:id="@+id/hole13thL"
+        android:layout_width="99dp"
+        android:layout_height="48dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="hole13thL"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        app:layout_constraintBottom_toTopOf="@+id/hole14thL"
+        app:layout_constraintEnd_toEndOf="@+id/hole14thL" />
+
+    <ImageButton
+        android:id="@+id/hole13thC"
+        android:layout_width="98dp"
+        android:layout_height="48dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="hole13thC"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        app:layout_constraintBottom_toTopOf="@+id/hole14thC"
+        app:layout_constraintEnd_toStartOf="@+id/hole13thR"
+        app:layout_constraintStart_toEndOf="@+id/hole13thL" />
+
+    <ImageButton
+        android:id="@+id/hole13thR"
+        android:layout_width="98dp"
+        android:layout_height="48dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="hole13thR"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        app:layout_constraintBottom_toTopOf="@+id/hole14thR"
+        app:layout_constraintStart_toStartOf="@+id/hole14thR" />
+
+    <ImageButton
+        android:id="@+id/hole14thL"
+        android:layout_width="124dp"
+        android:layout_height="54dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="hole14thL"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        app:layout_constraintBottom_toTopOf="@+id/hole15thL"
+        app:layout_constraintEnd_toEndOf="@+id/hole15thL" />
+
+    <ImageButton
+        android:id="@+id/hole14thC"
+        android:layout_width="124dp"
+        android:layout_height="54dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="hole14thC"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        app:layout_constraintBottom_toTopOf="@+id/hole15thC"
+        app:layout_constraintEnd_toStartOf="@+id/hole14thR"
+        app:layout_constraintStart_toEndOf="@+id/hole14thL" />
+
+    <ImageButton
+        android:id="@+id/hole14thR"
+        android:layout_width="124dp"
+        android:layout_height="54dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="hole14thR"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        app:layout_constraintBottom_toTopOf="@+id/hole15thR"
+        app:layout_constraintStart_toStartOf="@+id/hole15thR" />
+
+    <ImageButton
+        android:id="@+id/hole15thL"
+        android:layout_width="185dp"
+        android:layout_height="76dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="hole15thL"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        app:layout_constraintBottom_toTopOf="@+id/seventhMoleBtn"
+        app:layout_constraintEnd_toEndOf="@+id/seventhMoleBtn" />
+
+    <ImageButton
+        android:id="@+id/hole15thC"
+        android:layout_width="185dp"
+        android:layout_height="76dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="hole15thC"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        app:layout_constraintBottom_toTopOf="@+id/eigthMoleBtn"
+        app:layout_constraintEnd_toStartOf="@+id/hole15thR"
+        app:layout_constraintStart_toEndOf="@+id/hole15thL" />
+
+    <ImageButton
+        android:id="@+id/hole15thR"
+        android:layout_width="185dp"
+        android:layout_height="75dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="hole15thR"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        app:layout_constraintBottom_toTopOf="@+id/ninethMoleBtn"
+        app:layout_constraintStart_toStartOf="@+id/ninethMoleBtn" />
+
+    <ImageButton
+        android:id="@+id/seventhMoleBtn"
+        android:layout_width="245dp"
+        android:layout_height="108dp"
+        android:layout_marginBottom="4dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="HoleLeftLast"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        android:soundEffectsEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/eigthMoleBtn"
+        android:layout_width="245dp"
+        android:layout_height="108dp"
+        android:layout_marginBottom="4dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="HoleMiddleLast"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        android:soundEffectsEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ninethMoleBtn"
+        app:layout_constraintStart_toEndOf="@+id/seventhMoleBtn" />
+
+    <ImageButton
+        android:id="@+id/ninethMoleBtn"
+        android:layout_width="245dp"
+        android:layout_height="108dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="HoleRightLast"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hole_mole"
+        android:soundEffectsEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.gusakov.library.PulseCountDown
+        android:id="@+id/pulseCountDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elegantTextHeight="true"
+        android:fontFamily="@font/bauhaus_93"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:paddingRight="14dp"
+        android:paddingBottom="8dp"
+        android:text="3"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textDirection="firstStrong"
+        android:textSize="100dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pc_endValue="0"
+        app:pc_startValue="3" />
+
+    <TextView
+        android:id="@+id/startPauseMessageTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elegantTextHeight="true"
+        android:fontFamily="@font/bauhaus_93"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:paddingRight="14dp"
+        android:paddingBottom="8dp"
+        android:text="Pause"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textDirection="firstStrong"
+        android:textSize="50dp"
+        android:textStyle="normal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

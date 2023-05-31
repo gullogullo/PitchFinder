@@ -1,0 +1,135 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        app:icon="@drawable/ic_baseline_hearing_24"
+        app:title="@string/sound_header">
+
+        <SwitchPreferenceCompat
+            app:key="panning"
+            app:defaultValue="false"
+            app:summaryOff="@string/panning_summary_off"
+            app:summaryOn="@string/panning_summary_on"
+            app:title="@string/panning_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <!--<SwitchPreferenceCompat
+            app:key="doubletone"
+            app:defaultValue="false"
+            app:summaryOff="@string/doubletone_summary_off"
+            app:summaryOn="@string/doubletone_summary_on"
+            app:title="@string/doubletone_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <SeekBarPreference
+            android:id="@+id/delayBar"
+            app:defaultValue="2"
+            app:dependency="doubletone"
+            app:key="delay"
+            app:min="1"
+            android:max="10"
+            app:showSeekBarValue="true"
+            app:summary="@string/delay_bar_summary"-->
+            app:title="Delay time" />
+
+        <SeekBarPreference
+            app:defaultValue="100"
+            app:key="timbre"
+            app:showSeekBarValue="true"
+            app:min="40"
+            android:max="250"
+            app:seekBarIncrement="1"
+            app:summary="@string/timbre_summary"
+            app:title="Timbre" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:icon="@drawable/ic_baseline_engineering_24"
+        app:title="@string/test_header">
+
+        <SwitchPreferenceCompat
+            app:key="test"
+            app:defaultValue="false"
+            app:summaryOff="@string/test_summary_off"
+            app:summaryOn="@string/test_summary_on"
+            app:title="@string/test_title" />
+
+        <SeekBarPreference
+            android:id="@+id/minFreqBar"
+            app:defaultValue="500"
+            app:dependency="test"
+            app:key="minfrequency"
+            app:min="200"
+            android:max="500"
+            android:stepSize="10"
+            app:showSeekBarValue="true"
+            app:summary="@string/min_freq_summary"
+            app:title="Minimum frequency" />
+
+        <SeekBarPreference
+            android:id="@+id/maxFreqBar"
+            app:defaultValue="4000"
+            app:dependency="test"
+            app:key="maxfrequency"
+            app:min="510"
+            android:max="16000"
+            android:stepSize="100"
+            app:showSeekBarValue="true"
+            app:summary="@string/max_freq_summary"
+            app:title="Maximum frequency" />
+
+        <!--<EditTextPreference
+            android:id="@+id/freq1"
+            app:defaultValue="750"
+            app:dependency="test"
+            app:key="frequency1"
+            app:summary="@string/frequencies_summary"
+            app:title="1st Test frequency" />
+
+        <EditTextPreference
+            android:id="@+id/freq2"
+            app:defaultValue="1000"
+            app:dependency="test"
+            app:key="frequency2"
+            app:summary="@string/frequencies_summary"
+            app:title="2nd Test frequency" />
+
+        <EditTextPreference
+            android:id="@+id/freq3"
+            app:defaultValue="2000"
+            app:dependency="test"
+            app:key="frequency3"
+            app:summary="@string/frequencies_summary"
+            app:title="3rd Test frequency" />
+
+        <EditTextPreference
+            android:id="@+id/freq4"
+            app:defaultValue="1500"
+            app:dependency="test"
+            app:key="frequency4"
+            app:summary="@string/frequencies_summary"
+            app:title="4th Test frequency" />
+
+        <EditTextPreference
+            android:id="@+id/freq5"
+            app:defaultValue="1250"
+            app:dependency="test"
+            app:key="frequency5"
+            app:summary="@string/frequencies_summary"
+            app:title="5th Test frequency" />
+
+        <SeekBarPreference
+            android:id="@+id/numberTestBar"
+            app:defaultValue="3"
+            app:dependency="test"
+            app:key="tests_number"
+            app:min="1"
+            android:max="20"
+            app:showSeekBarValue="true"
+            app:summary="@string/tests_number_summary"
+            app:title="Number of tests"/>-->
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">PitchFinder</string>
+    <string name="sound_header">Sound</string>
+    <string name="test_header">Test</string>
+    <string name="doubletone_title">One tone or one-two tones play</string>
+    <string name="panning_title">Test tone panning</string>
+    <string name="test_title">Standard or customized test</string>
+    <string name="panning_summary_on">Test tone is on the left</string>
+    <string name="panning_summary_off">Test tone is on the right</string>
+    <string name="doubletone_summary_off">Hear just my tone</string>
+    <string name="doubletone_summary_on">Hear first my tone and then test tone</string>
+    <string name="timbre_summary">Select the timbre of sound (tau parameter)</string>
+    <string name="test_summary_off">3 random frequencies in the range 62.5 - 8000 Hz</string>
+    <string name="test_summary_on">Customized test</string>
+    <string name="frequencies_summary">Select test frequency</string>
+    <string name="min_freq_summary">Select minimum frequency</string>
+    <string name="max_freq_summary">Select maximum frequency</string>
+    <string name="progressive_summary_on">Fixed number of frequency bands</string>
+    <string name="progressive_summary_off">Increase number of frequency bands with each test</string>
+    <string name="progressive_title">Progressive number of bands</string>
+    <string name="tests_number_summary">Select number of tests per frequency</string>
+    <string name="delay_bar_summary">Select delay time between my tone and test tone</string>
+    <string name="start">Next</string>
+    <string name="my_tone">My Tone</string>
+    <string name="test_tone">Trovami!</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="mole_rules">Whack the moles! Tap the most moles within 30 seconds and get the maximum score!</string>
+    <string name="golden_mole_rule">If you see a golden mole, then hurry up. If you manage to click on it, you will get 3x points!</string>
+    <string name="tnt_mole_rules">Watch out for moles with TNT, because if you hit it, the game will end!</string>
+    <string name="title_activity_pitch2">PitchActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_transform">Transform</string>
+    <string name="menu_reflow">Reflow</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_settings">Settings</string>
+
+    <string name="lorem_ipsum_title">Lorem Ipsum"</string>
+    <string name="lorem_ipsum">Lorem Ipsum is simply placeholder text of the printing and
+        typesetting industry. Lorem Ipsum has been the industry\'s standard placeholder text ever
+        since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+        type specimen book"
+    </string>
+    <string name="fab_content_description">Represents a view to invoke an action</string>
+    <string name="image_view_item_transform_content_description">Represents an image view in the
+        item
+    </string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android2="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item
+        android:id="@+id/settingsbar"
+        android:icon="@android:drawable/ic_menu_preferences"
+        app:showAsAction="always|withText"
+        android2:title="settings" />
+    <item
+        android:id="@+id/reset"
+        android:icon="@android:drawable/ic_menu_revert"
+        app:showAsAction="always|withText"
+        android2:title="home" />
+    <item
+        android:id="@+id/exit"
+        android:icon="@drawable/ic_baseline_exit_to_app_24"
+        app:showAsAction="always|withText"
+        android2:title="quit">
+    </item>
+</menu>

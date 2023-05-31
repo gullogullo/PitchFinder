@@ -1,0 +1,71 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.example.pitchfinder'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.pitchfinder"
+        minSdk 19
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        prefab true
+        dataBinding true
+        viewBinding true
+    }
+    //externalNativeBuild {
+    //    cmake {
+    //        path file('src/main/cpp/CMakeLists.txt')
+    //        version '3.22.1'
+    //    }
+    //}
+}
+
+dependencies {
+    //implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation'org.greenrobot:eventbus:3.3.1'
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.games:games-activity:2.0.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.preference:preference-ktx:1.2.0'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'com.gusakov:pulse-countdown:1.1.0-rc1'
+    implementation 'com.opencsv:opencsv:5.7.1'
+    implementation 'org.puredata.android:pd-core:1.2.1-rc1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+    def fragment_version = '1.5.7'
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
+    def nav_version = '2.5.3'
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'org.florescu.android.rangeseekbar:rangeseekbar-library:0.4.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

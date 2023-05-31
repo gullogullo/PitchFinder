@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:windowMinWidthMajor="97%"
+    android:windowMinWidthMinor="97%"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/white_rounded_recktangle">
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintExit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/closeRulesBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="CloseImage"
+            android:padding="10dp"
+            android:src="@drawable/ic_baseline_close"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rulesRecView"
+        android:layout_width="777dp"
+        android:layout_height="1099dp"
+        android:layout_marginTop="16dp"
+        android:paddingBottom="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <ImageView
+        android:id="@+id/soundView"
+        android:layout_width="160dp"
+        android:layout_height="135dp"
+        android:background="@android:color/transparent"
+        android:padding="10dp"
+        android:src="@drawable/sound_icon"
+        app:layout_constraintBottom_toTopOf="@+id/volumeView"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroupSound"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.41" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupSound"
+        android:layout_width="207dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="0dp"
+        android:checkedButton="@+id/Sound"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/headerSound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Con che cosa hai ascoltato?" />
+
+        <RadioButton
+            android:id="@+id/SoundHeadphones"
+            android:layout_width="107dp"
+            android:layout_height="wrap_content"
+            android:button="?android:attr/listChoiceIndicatorMultiple"
+            android:text="Cuffie" />
+
+        <RadioButton
+            android:id="@+id/SoundTablet"
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:button="?android:attr/listChoiceIndicatorMultiple"
+            android:text="Tablet" />
+
+        <RadioButton
+            android:id="@+id/SoundOther"
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:button="?android:attr/listChoiceIndicatorMultiple"
+            android:text="Altro" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/volumeView"
+        android:layout_width="160dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:padding="10dp"
+        android:src="@drawable/volume_icon"
+        app:layout_constraintBottom_toTopOf="@+id/whereView"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroupVolume"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupSound"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupVolume"
+        android:layout_width="207dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="8dp"
+        android:checkedButton="@+id/Volume"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupSound">
+
+        <TextView
+            android:id="@+id/headerVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Con che volume hai ascoltato?" />
+
+        <RadioButton
+            android:id="@+id/VolumeHigh"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:button="?android:attr/listChoiceIndicatorMultiple"
+            android:text="Forte" />
+
+        <RadioButton
+            android:id="@+id/VolumeMedium"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:button="?android:attr/listChoiceIndicatorMultiple"
+            android:text="Medio" />
+
+        <RadioButton
+            android:id="@+id/VolumeLow"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:button="?android:attr/listChoiceIndicatorMultiple"
+            android:text="Piano" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/whereView"
+        android:layout_width="160dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:padding="10dp"
+        android:src="@drawable/where_icon"
+        app:layout_constraintBottom_toTopOf="@+id/moodView"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroupWhere"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupVolume"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupWhere"
+        android:layout_width="207dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="8dp"
+        android:checkedButton="@+id/Where"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupVolume">
+
+        <TextView
+            android:id="@+id/headerRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dove hai ascoltato?" />
+
+        <RadioButton
+            android:id="@+id/BigRoom"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:button="?android:attr/listChoiceIndicatorMultiple"
+            android:text="Stanza grande" />
+
+        <RadioButton
+            android:id="@+id/MediumRoom"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:button="?android:attr/listChoiceIndicatorMultiple"
+            android:text="Stanza media" />
+
+        <RadioButton
+            android:id="@+id/SmallRoom"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:button="?android:attr/listChoiceIndicatorMultiple"
+            android:text="Stanza piccola" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/submitText"
+        android:layout_width="160dp"
+        android:layout_height="56dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Invia!"
+        android:textColor="@color/black"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupMood" />
+
+    <ImageView
+        android:id="@+id/moodView"
+        android:layout_width="160dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:padding="10dp"
+        android:src="@drawable/mood_icon"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroupMood"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupWhere" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupMood"
+        android:layout_width="207dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="8dp"
+        android:checkedButton="@+id/Mood"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupWhere">
+
+        <TextView
+            android:id="@+id/headerMood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Come hai ascoltato?" />
+
+        <RadioButton
+            android:id="@+id/Happy"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content"
+            android:button="?android:attr/listChoiceIndicatorMultiple"
+            android:text="Sereno" />
+
+        <RadioButton
+            android:id="@+id/Angry"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content"
+            android:button="?android:attr/listChoiceIndicatorMultiple"
+            android:text="Arrabbiato" />
+
+        <RadioButton
+            android:id="@+id/Bored"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content"
+            android:button="?android:attr/listChoiceIndicatorMultiple"
+            android:text="Annoiato" />
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
